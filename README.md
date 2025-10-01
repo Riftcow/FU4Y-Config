@@ -1,3 +1,4 @@
 # FU4Y-Config
-adding my personal requirements toolkit (which include my necessary packages)
-It's my personal windows terminal configuration including (powershell-config, Neovim, lazyvim, etc.)
+adding personal requirements toolkit (which include my necessary packages)
+windows terminal configuration including (powershell-config, Neovim, lazyvim, etc.)
+Linux Important Libraries
