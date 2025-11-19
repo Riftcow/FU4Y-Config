@@ -107,18 +107,3 @@ Tell me which OS to target and I will add them.
 
 This is a personal config repo. Contributions are welcome — fork and open a pull request. If you send PRs, keep changes isolated and document any behavior changes.
 
----
-
-## License
-
-Add your license of choice (e.g., `MIT`) or write `All rights reserved.` If you want, I can add an MIT license file for you.
-
----
-
-## Contact
-
-Repo owner: Riftcow
-
----
-
-*Generated with help — want me to add install scripts, badges, or a short demo GIF? Reply with "add scripts" or "add badges".*
