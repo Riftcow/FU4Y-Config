@@ -3,6 +3,17 @@ return {
 
 	{
 		"nvim-treesitter/nvim-treesitter",
+		-- 'init' runs safely before the plugin is loaded
+		init = function()
+			-- MDX Filetype Registration
+			vim.filetype.add({
+				extension = {
+					mdx = "mdx",
+				},
+			})
+			vim.treesitter.language.register("markdown", "mdx")
+		end,
+		-- 'opts' are automatically merged with LazyVim's defaults
 		opts = {
 			ensure_installed = {
 				"astro",
@@ -21,22 +32,15 @@ return {
 				"sql",
 				"svelte",
 			},
-
-			-- matchup = {
-			-- 	enable = true,
-			-- },
-
-			-- https://github.com/nvim-treesitter/playground#query-linter
 			query_linter = {
 				enable = true,
 				use_virtual_text = true,
 				lint_events = { "BufWrite", "CursorHold" },
 			},
-
 			playground = {
 				enable = true,
 				disable = {},
-				updatetime = 25, -- Debounced time for highlighting nodes in the playground from source code
+				updatetime = 25, -- Debounced time for highlighting nodes in the playground
 				persist_queries = true, -- Whether the query persists across vim sessions
 				keybindings = {
 					toggle_query_editor = "o",
@@ -52,16 +56,5 @@ return {
 				},
 			},
 		},
-		config = function(_, opts)
-			require("nvim-treesitter.configs").setup(opts)
-
-			-- MDX
-			vim.filetype.add({
-				extension = {
-					mdx = "mdx",
-				},
-			})
-			vim.treesitter.language.register("markdown", "mdx")
-		end,
 	},
 }
